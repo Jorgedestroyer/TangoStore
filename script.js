@@ -28,7 +28,7 @@ function actualizarCarrito() {
   carrito.forEach((producto, index) => {
     const item = document.createElement("li");
     item.innerHTML = `
-      ${producto.nombre} - $${producto.precio.toLocaleString()}
+      ${producto.nombre} - Talla: ${producto.talla} - $${producto.precio.toLocaleString()}
       <button class="eliminar-btn" onclick="eliminarDelCarrito(${index})">Eliminar</button>
     `;
     lista.appendChild(item);
@@ -71,5 +71,19 @@ function showAll() {
   document.querySelectorAll(".product").forEach(p => p.style.display = "block");
 }
 
+
 // Inicializa el contador al cargar la página
 document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
+
+
+function agregarProductoConTalla(btn, nombreProducto, precio) {
+  const select = btn.parentElement.querySelector('.talla-select');
+  const talla = select ? select.value : '';
+  if (!talla) {
+    alert('Por favor selecciona una talla.');
+    return;
+  }
+  carrito.push({ nombre: nombreProducto, precio: precio, talla: talla });
+  actualizarCarrito();
+  actualizarContadorCarrito();
+}
