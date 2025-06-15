@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TangoStore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- MODAL DEL CARRITO -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <ul id="cart-items"></ul>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+  </div>
+<!-- FIN DEL MODAL DEL CARRITO -->
+
+<body>
+  <header>
+    <h1>TangoStore</h1>
+
+    <img src="imagenes/logo_intro.png" alt="Logo TangoStore" style="display:block; margin: 0 auto; max-width: 200px;">
+    <p>¡Bienvenido a TangoStore! Tu tienda de moda online.</p>
+    <p>Explora nuestra amplia gama de productos y encuentra lo que más te gusta.</p>
+    <nav>
+      <button onclick="showAll()">Inicio</button>
+      <button onclick="filterItems('Zapatillas')">Zapatillas</button>
+      <button onclick="filterItems('pantalones')">Pantalones</button>
+      <button onclick="filterItems('oversize')">oversize</button>
+      <button onclick="filterItems('accesorios')">Accesorios</button>   
+      <button onclick="abrirCarrito()" style="position:relative;">
+        🛒 Carrito
+        <span id="cart-count" class="cart-count">0</span>
+       </button>
+    </nav>
+  </header>
+
+<main id="product-container">
+    <div class="product Zapatillas" data-precio="69990">
+      <img src="imagenes/zapatilla_pink.png" alt="zapatilla_pink">
+      <p>Zapatilla LEDPink</p>
+      <p class="precio">$69.990</p>
+      <button onclick="addToCart('zapatilla_pink', 69990)">Agregar</button>
+    </div>
+    <div class="product Zapatillas" data-precio="64990">
+      <img src="imagenes/zapatilla_purple.png" alt="zapatilla_purple">
+      <p>Zapatilla LEDPurple</p>
+      <p class="precio">$64.990</p>
+      <button onclick="addToCart('zapatilla_purple', 64990)">Agregar</button>
+    </div>
+    <div class="product Zapatillas" data-precio="89990">
+      <img src="imagenes/zapatilla_blacktango.png" alt="zapatilla_pink">
+      <p>Zapatilla blackRiNo</p>
+      <p class="precio">$89.990</p>
+      <button onclick="addToCart('zapatilla_blacktango', 89990)">Agregar</button>
+    </div>
+    <div class="product pantalones" data-precio="39990">
+      <img src="imagenes/blue_jeans.png" alt="blue_jeans">
+      <p>Blue Jeans</p>
+      <p class="precio">$39.990</p>
+      <button onclick="addToCart('blue_jeans', 39990)">Agregar</button>
+    </div>
+    <div class="product pantalones" data-precio="39990">
+      <img src="imagenes/black_jeans.png" alt="black_jeans">
+      <p>Black Jeans</p>
+      <p class="precio">$39.990</p>
+      <button onclick="addToCart('black_jeans', 39990)">Agregar</button>
+    </div>
+    <div class="product oversize" data-precio="14990">
+      <img src="imagenes/polera_blackgreen.png" alt="polera_blackgreen">
+      <p>Polera Blackgreen</p>
+      <p class="precio">$14.990</p>
+      <button onclick="addToCart('polera_blackgreen', 14990)">Agregar</button>
+    </div>
+    <div class="product oversize" data-precio="54990">
+      <img src="imagenes/poleron_polera_oversize.png" alt="poleron_polera_oversize">
+      <p>Poleron y Polera Oversize</p>
+      <p class="precio">$54.990</p>
+      <button onclick="addToCart('poleron_polera_oversize', 54990)">Agregar</button>
+    </div>
+    <div class="product oversize" data-precio="14990">
+      <img src="imagenes/polera_white1.png" alt="polera_white1">
+      <p>Polera Oversize White </p>
+      <p class="precio">$14.990</p>
+      <button onclick="addToCart('polera_white1', 14990)">Agregar</button>
+    </div>
+    <div class="product oversize" data-precio="14990">
+      <img src="imagenes/polera_white2.png" alt="polera_white2">
+      <p>Polera Rino White </p>
+      <p class="precio">$14.990</p>
+      <button onclick="addToCart('polera_white2', 14990)">Agregar</button>
+    </div>
+    <div class="product accesorios" data-precio="24990">
+      <img src="imagenes/jockey_tango.png" alt="jockey_tango">
+      <p>Jockey Tango </p>
+      <p class="precio">$24.990</p>
+      <button onclick="addToCart('jockey_tango', 24990)">Agregar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TangoStore</p>
+    <div class="redes-sociales">
+    <a href="https://instagram.com/" target="_blank">
+      <img src="imagenes/instagram.png" alt="Instagram" class="icono-red">
+    </a>
+    <a href="https://twitter.com/" target="_blank">
+      <img src="imagenes/twitter.png" alt="Twitter" class="icono-red">
+    </a>
+    <a href="https://facebook.com/" target="_blank">
+      <img src="imagenes/facebook.png" alt="Facebook" class="icono-red">
+    </a>
+  </div>
+    <p>Desarrollado por Jorge Eduardo Torres Ferreira</p>
+    <p>Contacto:+56936647721 </p>
+    <p>Email:Jorgetorresfe79@gmail.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
