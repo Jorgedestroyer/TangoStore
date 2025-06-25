@@ -1,175 +1,197 @@
+/* Estilos generales para el body de la página */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #D3D3D3;
-  color: #000;
+  margin: 0; /* Quita el margen por defecto del navegador */
+  font-family: 'Arial', sans-serif; /* Fuente principal */
+  background-color: #D3D3D3; /* Color de fondo general */
+  color: #000; /* Color de texto general */
 }
 
+/* Estilos para el encabezado principal */
 header {
-  background-color: #3f0137;
-  color: #FFD700;
-  padding: 1em;
-  text-align: center;
+  background-color: #3f0137; /* Fondo morado oscuro */
+  color: #FFD700; /* Texto dorado */
+  padding: 1em; /* Espaciado interno */
+  text-align: center; /* Centra el contenido */
 }
 
+/* Estilos para los botones del menú de navegación */
 nav button {
-  background-color: #4B0082;
-  color: #FFFFFF;
-  border: none;
-  margin: 0.5em;
-  padding: 0.8em 1.2em;
-  cursor: pointer;
-  border-radius: 8px;
+  background-color: #4B0082; /* Fondo morado */
+  color: #FFFFFF; /* Texto blanco */
+  border: none; /* Sin borde */
+  margin: 0.5em; /* Espaciado entre botones */
+  padding: 0.8em 1.2em; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  border-radius: 8px; /* Bordes redondeados */
 }
 
+/* Efecto hover para los botones del menú de navegación */
 nav button:hover {
-  background-color: #FFD700;
-  color: #000;
+  background-color: #FFD700; /* Fondo dorado al pasar el mouse */
+  color: #000; /* Texto negro al pasar el mouse */
 }
 
+/* Estilos para el contenedor principal de productos */
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  padding: 2em;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 100px; /* Agrega espacio para el footer fijo */
+  display: flex; /* Usa flexbox para organizar los productos */
+  flex-wrap: wrap; /* Permite que los productos bajen a la siguiente línea */
+  justify-content: center; /* Centra los productos horizontalmente */
+  gap: 2em; /* Espacio entre productos */
+  padding: 2em; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo del área de productos */
+  margin: 0 auto; /* Centra el main en la página */
+  padding-bottom: 100px; /* Espacio extra abajo para que el footer no tape productos */
 }
 
+/* Estilos para cada tarjeta de producto */
 .product {
-  background-color: #FFFFFF;
-  border: 2px solid #000;
-  width: 220px;       /* Más ancho para cada producto */
-  padding: 1.5em;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #FFFFFF; /* Fondo blanco */
+  border: 2px solid #000; /* Borde negro */
+  width: 220px; /* Ancho fijo de cada producto */
+  padding: 1.5em; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
+  display: flex; /* Flexbox para organizar contenido interno */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
 }
 
+/* Estilos para las imágenes dentro de los productos */
 .product img {
-  max-width: 180px;   /* Ajusta el tamaño de la imagen dentro del producto */
-  height: auto;
-  margin-bottom: 1em;
+  max-width: 180px; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática para mantener proporción */
+  margin-bottom: 1em; /* Espacio debajo de la imagen */
 }
 
+/* Estilos para el precio dentro de los productos */
 .product .precio {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #4B0082;
-  margin: 0.5em 0;
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  color: #4B0082; /* Color morado */
+  margin: 0.5em 0; /* Espaciado arriba y abajo */
 }
 
+/* Estilos para el botón "Agregar" dentro de cada producto */
 .product button {
-  margin-top: 1em;
-  width: 100%;
+  margin-top: 1em; /* Espacio arriba del botón */
+  width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
 }
 
+/* Estilos para el pie de página */
 footer {
-  background-color: #000;
-  color: #FFF;
-  text-align: center;
-  padding: 1em;
-  width: 100%;
+  background-color: #000; /* Fondo negro */
+  color: #FFF; /* Texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 1em; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho */
 }
 
-
+/* Estilos para el modal (ventana emergente del carrito) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo en la pantalla */
+  z-index: 100; /* Encima de otros elementos */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa todo el alto */
+  overflow: auto; /* Permite scroll si es necesario */
+  background-color: rgba(0,0,0,0.5); /* Fondo oscuro semi-transparente */
 }
 
+/* Estilos para el contenido del modal */
 .modal-content {
-  background-color: #FFFFFF;
-  margin: 10% auto;
-  padding: 20px;
-  border: 3px solid #FFD700;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 15px;
-  text-align: center;
-  color: #000;
+  background-color: #FFFFFF; /* Fondo blanco */
+  margin: 10% auto; /* Centrado vertical y horizontal */
+  padding: 20px; /* Espaciado interno */
+  border: 3px solid #FFD700; /* Borde dorado */
+  width: 80%; /* Ancho del modal */
+  max-width: 500px; /* Ancho máximo */
+  border-radius: 15px; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+  color: #000; /* Texto negro */
 }
 
+/* Estilos para el botón de cerrar (X) del modal */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+  color: #aaa; /* Gris claro */
+  float: right; /* Alineado a la derecha */
+  font-size: 28px; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  cursor: pointer; /* Cursor de mano */
 }
 
+/* Efecto hover para el botón de cerrar */
 .close:hover {
-  color: red;
+  color: red; /* Rojo al pasar el mouse */
 }
 
+/* Estilos para la lista de productos en el carrito */
 #cart-items {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  margin-bottom: 20px; /* Espacio debajo de la lista */
 }
 
+/* Estilos para cada producto en la lista del carrito */
 #cart-items li {
-  padding: 8px;
-  border-bottom: 1px solid #ccc;
+  padding: 8px; /* Espaciado interno */
+  border-bottom: 1px solid #ccc; /* Línea divisoria */
 }
 
+/* Estilos para el botón "Eliminar" en el carrito */
 .eliminar-btn {
-  margin-left: 10px;
-  background: #c00;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 4px 10px;
-  font-size: 0.95em;
-  transition: background 0.2s;
+  margin-left: 10px; /* Espacio a la izquierda */
+  background: #c00; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano */
+  padding: 4px 10px; /* Espaciado interno */
+  font-size: 0.95em; /* Tamaño de fuente */
+  transition: background 0.2s; /* Transición suave al cambiar color */
 }
 
+/* Efecto hover para el botón "Eliminar" */
 .eliminar-btn:hover {
-  background: #900;
+  background: #900; /* Rojo más oscuro al pasar el mouse */
 }
 
+/* Estilos para el contador de productos en el ícono del carrito */
 .cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #c00;
-  color: #fff;
-  border-radius: 50%;
-  padding: 2px 7px;
-  font-size: 0.9em;
-  font-weight: bold;
-  z-index: 2;
+  position: absolute; /* Posición absoluta respecto al botón */
+  top: -8px; /* Arriba del botón */
+  right: -8px; /* A la derecha del botón */
+  background: #c00; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  border-radius: 50%; /* Forma circular */
+  padding: 2px 7px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  z-index: 2; /* Encima de otros elementos */
 }
 
+/* Estilos para el contenedor de redes sociales en el footer */
 .redes-sociales {
-  margin-top: 10px;
+  margin-top: 10px; /* Espacio arriba */
 }
 
+/* Estilos para los enlaces de redes sociales */
 .redes-sociales a {
-  margin: 0 10px;
-  display: inline-block;
-  transition: transform 0.2s;
+  margin: 0 10px; /* Espacio entre íconos */
+  display: inline-block; /* En línea pero con propiedades de bloque */
+  transition: transform 0.2s; /* Transición suave al escalar */
 }
 
+/* Efecto hover para los enlaces de redes sociales */
 .redes-sociales a:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
 }
 
+/* Estilos para las imágenes de los íconos de redes sociales */
 .icono-red {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
+  width: 32px; /* Ancho fijo */
+  height: 32px; /* Alto fijo */
+  vertical-align: middle; /* Centra verticalmente con el texto */
 }
